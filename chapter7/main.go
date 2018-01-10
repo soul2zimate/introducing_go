@@ -5,11 +5,12 @@ import (
 	"math"
 )
 
-// struct
+// Circle  struct
 type Circle struct {
 	x, y, r float64
 }
 
+// Rectangle struct
 type Rectangle struct {
 	x1, y1, x2, y2 float64
 }
@@ -43,7 +44,7 @@ func (r *Rectangle) area() float64 {
 	return l * w
 }
 
-// embedded types
+// Person embedded types
 type Person struct {
 	name string
 }
@@ -52,6 +53,7 @@ func (p *Person) talk() {
 	fmt.Println("hi my name is : ", p.name)
 }
 
+// Android struct
 type Android struct {
 	Person
 	model string
@@ -59,6 +61,7 @@ type Android struct {
 
 // interface
 
+// Shape interface
 type Shape interface {
 	area() float64
 	perimeter() float64
@@ -73,6 +76,7 @@ func totleArea(shapes ...Shape) float64 {
 	return area
 }
 
+// MultiShape struct
 type MultiShape struct {
 	shapes []Shape
 }
